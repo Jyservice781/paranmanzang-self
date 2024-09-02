@@ -14,6 +14,4 @@ public interface UserService{
     long count();
     void deleteById(Long id);
     boolean existsById(Long id);
-
-   // Map<?,?> login(UserModel model);
 }

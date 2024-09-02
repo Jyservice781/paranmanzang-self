@@ -1,7 +1,7 @@
 package com.category.paranmanzang.service.impl;
 
 import com.category.paranmanzang.model.domain.UserModel;
-import com.category.paranmanzang.model.entity.CategoryEntity;
+
 import com.category.paranmanzang.model.entity.UserEntity;
 import com.category.paranmanzang.model.repository.UserRepository;
 import com.category.paranmanzang.service.UserService;
@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
+
 import java.util.Optional;
 
 @Service
@@ -47,10 +47,4 @@ public class UserServiceImpl implements UserService {
     public boolean existsById(Long id) {
         return false;
     }
-
-  /*  @Override
-    public Map<?, ?> login(UserModel model) {
-        Map<?,?> map = userRepository.login(model);
-        return map;
-    }*/
 }

@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Controller
-@RequestMapping("/categories/")
+@RequestMapping("/api/categories/")
 @RequiredArgsConstructor
 // 자연어로 연결해줌 -> 인덱스로 연결(indexing)
 public class CategoryController {

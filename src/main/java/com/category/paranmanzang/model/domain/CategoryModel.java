@@ -1,6 +1,5 @@
 package com.category.paranmanzang.model.domain;
 
-import lombok.Builder;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 

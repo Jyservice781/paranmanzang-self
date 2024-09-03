@@ -10,7 +10,7 @@ import java.util.*;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/hotel/")
+@RequestMapping("/api/hotels/")
 @RequiredArgsConstructor
 public class HotelController {
 

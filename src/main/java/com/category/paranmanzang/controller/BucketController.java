@@ -30,7 +30,7 @@ public class BucketController{
     }
 
     @GetMapping("findById")
-    public Optional<BucketEntity> findById(Long id) {
+    public List<BucketEntity> findById(Long id) {
         return bucketService.findById(id);
     }
 

@@ -32,8 +32,8 @@ public class CategoryController {
     }
 
     @GetMapping("findById")
-    public Optional<CategoryEntity> findById(CategoryModel id) {
-        return Optional.empty();
+    public List<CategoryEntity> findById(CategoryModel id) {
+        return List.of();
     }
 
     @GetMapping("count")

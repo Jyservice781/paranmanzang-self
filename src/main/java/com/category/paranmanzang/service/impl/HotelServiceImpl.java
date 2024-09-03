@@ -29,8 +29,8 @@ public class HotelServiceImpl implements HotelService {
     }
 
     @Override
-    public Optional<HotelEntity> findById(Long id) {
-        return hotelRepository.findById(id);
+    public List<HotelEntity> findById(Long id) {
+        return List.of();
     }
 
     @Override

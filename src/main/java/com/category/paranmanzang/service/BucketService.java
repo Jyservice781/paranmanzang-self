@@ -9,7 +9,7 @@ import java.util.Optional;
 public interface BucketService {
     List<BucketEntity> findAll();
     BucketEntity save(BucketModel bucketModel);
-    Optional<BucketEntity> findById(Long id);
+    List<BucketEntity> findById(Long id);
     long count();
     void deleteById(Long id);
     boolean existsById(Long id);

@@ -27,9 +27,10 @@ public class BucketServiceImpl implements BucketService {
     }
 
     @Override
-    public Optional<BucketEntity> findById(Long id) {
-        return bucketRepository.findById(id);
+    public List<BucketEntity> findById(Long id) {
+        return List.of();
     }
+
 
     @Override
     public long count() {

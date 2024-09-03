@@ -27,9 +27,10 @@ public class ReplyServiceImpl implements ReplyService {
     }
 
     @Override
-    public Optional<ReplyEntity> findById(Long id) {
-        return replyRepository.findById(id);
+    public List<ReplyEntity> findById(Long id) {
+        return List.of();
     }
+
 
     @Override
     public long count() {

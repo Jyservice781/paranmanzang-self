@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Tag(name = "제목", description = "소제목")
 @RestController
+@CrossOrigin(origins = "http://localhost:3000/")
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/example")
 public class ExampleApiController {

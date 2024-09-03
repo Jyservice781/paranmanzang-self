@@ -9,8 +9,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@CrossOrigin
-@RequestMapping("/reply/")
+@CrossOrigin(origins = "http://localhost:3000/")
+@RequestMapping("/api/replies/")
 @RequiredArgsConstructor
 public class ReplyController {
     private final ReplyRepository replyRepository;

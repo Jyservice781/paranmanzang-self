@@ -12,8 +12,9 @@ import java.util.Map;
 
 // rest 를 붙이면 스프링 밖에서 처리할 수 있도록 함.
 @RestController
+@CrossOrigin(origins = "http://localhost:3000/")
 @RequiredArgsConstructor
-@RequestMapping("users")
+@RequestMapping("/api/users/")
 public class UserController {
     private final UserRepository userRepository;
 

@@ -4,6 +4,7 @@ import com.category.paranmanzang.model.entity.CategoryEntity;
 import com.category.paranmanzang.service.CategoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,7 @@ import java.util.Optional;
 
 @Controller
 @RequestMapping("/api/categories/")
+@CrossOrigin(origins = "http://localhost:3000/")
 @RequiredArgsConstructor
 // 자연어로 연결해줌 -> 인덱스로 연결(indexing)
 public class CategoryController {

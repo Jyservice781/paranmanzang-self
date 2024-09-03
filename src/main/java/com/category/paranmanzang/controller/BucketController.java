@@ -4,6 +4,7 @@ import com.category.paranmanzang.model.domain.BucketModel;
 import com.category.paranmanzang.model.entity.BucketEntity;
 import com.category.paranmanzang.service.BucketService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,7 +13,8 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/buckets/")
+@CrossOrigin(origins = "http://localhost:3000/")
+@RequestMapping("/api/buckets/")
 @RequiredArgsConstructor
 public class BucketController{
     private final BucketService bucketService;

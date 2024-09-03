@@ -13,6 +13,9 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Tag(name = "제목", description = "소제목")
 @RestController
@@ -44,6 +47,12 @@ public class ExampleApiController {
         String s = String.format("PathValue = %d , ParamValue = %s, Request Email : %s", pathValue, paramValue, requestBody.getEmail());
         BasicResponseDto response = new BasicResponseDto(true, "Example API Success",  s);
         return response;
+    }
+
+    @SuppressWarnings("unchecked")
+    public void someMethod() {
+        List list = new ArrayList();
+        list.add("string");
     }
 
 

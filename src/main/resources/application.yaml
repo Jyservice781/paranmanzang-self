@@ -19,15 +19,6 @@ spring:
       root: info
       org.hibernate.SQL: debug
 
-  # MyBatis 설정
-  mybatis:
-    config-location: classpath:mybatis-.config.xml
-    mapper-locations: classpath*:mapper/**/*.xml
-    configuration:
-      map-underscore-to-camel-case: true
-      default-fetch-size: 100
-      default-statement-timeout: 30
-
   # swagger
   springdoc:
     swagger-ui:

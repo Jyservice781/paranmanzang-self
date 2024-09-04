@@ -12,7 +12,7 @@ import java.util.Date;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Builder
-@Table(name = "replies")
+@Table(name = "reply")
 public class ReplyEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

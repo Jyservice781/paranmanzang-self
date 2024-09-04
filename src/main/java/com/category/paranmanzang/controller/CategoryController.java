@@ -1,15 +1,12 @@
 package com.category.paranmanzang.controller;
 import com.category.paranmanzang.model.domain.CategoryModel;
 import com.category.paranmanzang.model.entity.CategoryEntity;
-import com.category.paranmanzang.model.entity.ReplyEntity;
 import com.category.paranmanzang.service.CategoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/categories/")
@@ -29,8 +26,8 @@ public class CategoryController {
     }
 
     @PostMapping("save")
-    public CategoryEntity save(CategoryModel id) {
-        return null;
+    public ResponseEntity<?> save(CategoryModel id) {
+        return ResponseEntity.ok(categoryService.save(id));
     }
 
     @GetMapping("findById")

@@ -1,5 +1,6 @@
 package com.category.paranmanzang.controller;
 
+import com.category.paranmanzang.model.domain.HotelModel;
 import com.category.paranmanzang.model.entity.HotelEntity;
 import  com.category.paranmanzang.service.HotelService;
 import lombok.RequiredArgsConstructor;
@@ -15,6 +16,11 @@ import java.util.*;
 public class HotelController {
 
     private final HotelService hotelService;
+
+    @GetMapping("showList")
+    public ResponseEntity<?> selectList() {
+        return ResponseEntity.ok(hotelService.findAll());
+    }
 
     @PostMapping("uploads")
     public Map<String, Object> uploadFiles() {

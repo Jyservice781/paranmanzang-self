@@ -10,7 +10,7 @@ public interface CategoryService{
 
     List<CategoryEntity> findAll();
     CategoryEntity save(CategoryModel categoryModel);
-    List<CategoryEntity> findById(Long id);
+    Optional<CategoryEntity> findById(Long id);
     long count();
     void deleteById(Long id);
     boolean existsById(Long id);

@@ -30,7 +30,7 @@ public class HotelServiceImpl implements HotelService {
 
     @Override
     public List<HotelEntity> findById(Long id) {
-        return List.of();
+        return hotelRepository.findAllById(id);
     }
 
     @Override

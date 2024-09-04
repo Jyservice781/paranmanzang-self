@@ -1,12 +1,16 @@
 package com.category.paranmanzang.controller;
 
+import com.category.paranmanzang.model.domain.ReplyModel;
+import com.category.paranmanzang.model.entity.ReplyEntity;
 import com.category.paranmanzang.model.repository.ReplyRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000/")
@@ -16,28 +20,23 @@ public class ReplyController {
     private final ReplyRepository replyRepository;
 
     @GetMapping("selectList")
-    public HashMap<String, Object> showList() {
-        HashMap<String, Object> result = new HashMap<>();
-        return result;
+    public ResponseEntity<List<ReplyEntity>> showList() {
+        return ResponseEntity.ok(replyRepository.findAll());
     }
 
     @GetMapping("selectOne")
-    public HashMap<String, Object> showOne() {
-        HashMap<String, Object> result = new HashMap<>();
-        return result;
+    public ResponseEntity<?> showOne(Long id) {
+        return ResponseEntity.ok(replyRepository.findById(id));
     }
 
     @PostMapping("write")
-    public ResponseEntity<Map<String, Object>> write() {
-        Map<String, Object> resultMap = new HashMap<>();
-        return ResponseEntity.ok(resultMap);
+    public ResponseEntity<?> write(ReplyModel replyModel) {
+        return ResponseEntity.ok(replyRepository.save(ReplyEntity.builder().build()));
     }
 
-    @PostMapping("update")
-    public Map<String, Object> update() {
-        Map<String, Object> resultMap = new HashMap<>();
-
-        return resultMap;
+    @PutMapping("update")
+    public ResponseEntity<?> update(ReplyModel replyModel) {
+        return ResponseEntity.ok(replyRepository.save(ReplyEntity.builder().build()));
     }
 
     @GetMapping("delete")

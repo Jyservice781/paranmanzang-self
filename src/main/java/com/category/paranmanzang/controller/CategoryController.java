@@ -1,8 +1,10 @@
 package com.category.paranmanzang.controller;
 import com.category.paranmanzang.model.domain.CategoryModel;
 import com.category.paranmanzang.model.entity.CategoryEntity;
+import com.category.paranmanzang.model.entity.ReplyEntity;
 import com.category.paranmanzang.service.CategoryService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,8 +24,8 @@ public class CategoryController {
     // 내부 쿼리는 전부 하나의 테이블만 헨들링 한다.
     // 테이블을 여러개 핸들링 해야한다.
     @GetMapping("findAll")
-    public List<CategoryModel> findAll() {
-        return List.of();
+    public ResponseEntity<List<CategoryEntity>> findAll() {
+        return ResponseEntity.ok(categoryService.findAll());
     }
 
     @PostMapping("save")

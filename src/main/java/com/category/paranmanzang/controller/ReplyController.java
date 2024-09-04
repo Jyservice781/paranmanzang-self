@@ -15,13 +15,13 @@ import java.util.Map;
 public class ReplyController {
     private final ReplyRepository replyRepository;
 
-    @GetMapping("selectList/{hotelId}")
+    @GetMapping("selectList")
     public HashMap<String, Object> showList() {
         HashMap<String, Object> result = new HashMap<>();
         return result;
     }
 
-    @GetMapping("selectOne/{id}")
+    @GetMapping("selectOne")
     public HashMap<String, Object> showOne() {
         HashMap<String, Object> result = new HashMap<>();
         return result;
@@ -40,7 +40,7 @@ public class ReplyController {
         return resultMap;
     }
 
-    @GetMapping("delete/{id}")
+    @GetMapping("delete")
     public ResponseEntity<Void> delete() {
         return ResponseEntity.ok().build();
     }

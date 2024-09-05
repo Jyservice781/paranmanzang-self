@@ -1,6 +1,5 @@
 package com.category.paranmanzang.controller;
 
-import com.category.paranmanzang.model.domain.HotelModel;
 import com.category.paranmanzang.model.entity.HotelEntity;
 import  com.category.paranmanzang.service.HotelService;
 import lombok.RequiredArgsConstructor;
